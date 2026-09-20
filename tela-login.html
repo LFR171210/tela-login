@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(213, 242, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        label {
+            display: inline-block;
+            width: 60px;
+            margin-bottom: 5px;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #login {
+            margin-top: 0px;
+            margin-bottom: 60px;
+            font-size: 42px;
+        }
+        #botao {
+            display: block;
+            margin: 15px auto;
+            border-radius: 3.5px;
+            border: solid 1px #999;
+            cursor: pointer;
+            background-color: white;
+            padding: 4px;
+        }
+        .letras {
+            display: block;
+            margin: 5px auto;
+            width: 220px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #borda {
+            border-radius: 15px;
+            height: 460px;
+            width: 410px;
+            background-color: rgb(170, 222, 247);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);;
+        }
+        input {
+            width: 220px;
+            margin-bottom: 15px;
+            border: solid 1px #999;
+            border-radius: 3.5px;
+            padding: 3px;
+        }
+        #botao:hover {
+            background-color: #d9d9d9;
+        }
+        input:focus {
+            outline: none;
+            border: 2px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="borda">
+            <h1 id="login">Login</h1>
+            <form>
+                <label for="usuario" class="letras">Usuário</label>
+                <input type="text" id="usuario" placeholder="Digite seu usuário" required>
+                <br>
+                <br>
+                <label for="senha" class="letras">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+                <br>
+                <br>
+                <button type="submit" id="botao" onclick="entrar()">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function entrar() {
+            let usuario = document.getElementById("usuario").value;
+            let senha = document.getElementById("senha").value;
+
+            if (usuario === "" || senha === "") {
+                alert("Preencha todos os campos!");
+            } else {
+                alert("Login enviado!");
+            }
+        }       
+</script>
+</body>
+</html>
